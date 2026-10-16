@@ -110,23 +110,39 @@ var BANK = {
 ["State True or False. In LOADng routing, an intermediate router may respond to a Route Request (RREQ) whenever it already has an active route to the requested destination.",["True","False"],"b","In LOADng only the destination may respond to an RREQ; intermediate routers are prohibited from responding."],
 ["How does a passive RFID tag obtain the power required to transmit information?",["It uses its own internal battery.","It is powered inductively by an RFID reader.","It receives power through a wired AIDC connection.","It does not require any source of power."],"b","Passive tags have no power supply; they are powered inductively by a reader. Active tags have their own supply."]
 ],
+
 3:[
-["State whether true or false. There is no network layer in Wired HART.",["True","False"],"a","There is no network layer in Wired HART."],
-["Zwave operates at ________ MHz in the US and ________ MHz in Europe.",["1008, 989","908.42, 868.42","767.56, 855.28","None of these"],"b","Z-Wave operates at 908.42 MHz in the US and 868.42 MHz in Europe."],
-["Dumb behavior of sensor nodes is ________ in nature (as it is dependent on the effects of the environmental conditions).",["Temporal","Spatial","Both (a) and (b)","None of these"],"a","Dumb behavior of sensor nodes is temporal in nature."],
-["The process of identifying channels consistently affected by interference and removing them from use is known as ________.",["Channel Trimming","Channel Flushing","Both (a) and (b)","None of these"],"d","The correct term is Channel Blacklisting, which is not among the options."],
-["The full form of NFC is",["Near Field Contact","Near Field Communication","Both (a) and (b)","Neither (a) nor (b)"],"b","NFC stands for Near Field Communication."],
-["State true or false. NFC works on the principle of magnetic induction.",["True","False"],"a","NFC works on the principle of magnetic induction."],
-["State whether true or false. NFC tags found in supermarket products are examples of active NFC.",["True","False"],"b","Supermarket NFC tags are examples of passive NFC."],
-["Bluetooth is based on ________.",["Nanonets","Binarynets","Both (a) and (b)","None of these"],"d","Bluetooth is based on Piconets."],
-["A ________ in NFC emits a small electric current which creates a magnetic field that in turn bridges the physical space between the devices.",["reader","writer","destroyer","None of these"],"a","A reader emits the current that creates the magnetic field bridging the devices."],
-["State true or false. Bluetooth technology is based on Ad-hoc network technology.",["False","True"],"b","Bluetooth is based on ad-hoc network technology."],
-["State true or false. Zwave utilizes GFSK modulation and Hongkong channel encoding.",["True","False"],"b","Z-Wave uses GFSK modulation and Manchester channel encoding."],
-["The process of bypassing radio dead-spots is done using a message called ________ in Zwave.",["Ping","Healing","Frame","None of these"],"b","Bypassing radio dead-spots uses a message called Healing."],
-["State whether true or false. Sensor nodes have unlimited battery life.",["True","False"],"b","Sensor nodes have limited battery life."],
-["State whether true or false. The Link Manager Protocol in Bluetooth manages the establishment, authentication, link configuration.",["True","False"],"a","The Link Manager Protocol handles link establishment, authentication and configuration."],
-["Zigbee commonly uses ________ data rate.",["250 kbps","250 Mbps","260 kbps","260 Mbps"],"a","Zigbee commonly uses a 250 kbps data rate."]
+["Which WirelessHART data-link mechanism provides reliable, collision-free, and deterministic communication?",["Superframes divided into 10-millisecond TDMA time slots","Pure ALOHA without time-slot allocation","CSMA/CD over a wired Ethernet bus","Token-ring circulation among field devices"],"a","WirelessHART uses TDMA (Time Division Multiple Access). Time is divided into fixed slots assigned to devices, preventing simultaneous transmissions and providing predictable, reliable communication."],
+
+["In WirelessHART, which entity supervises network nodes and guides them regarding when and where packets should be transmitted?",["Network manager","NFC reader","Z-Wave end device","Bluetooth inquiry agent"],"a","The WirelessHART Network Manager manages the network, determines communication paths, and schedules when devices transmit data."],
+
+["Which of the following are operating modes of NFC?",["Peer-to-peer mode","Read/write mode","Card-emulation mode","Frequency-hopping mode"],"abc","NFC supports three main modes: peer-to-peer for exchanging information between devices, read/write for interacting with tags, and card emulation for acting like a contactless smart card."],
+
+["Which of the following are phases of Bluetooth connection establishment?",["Inquiry or discovery phase","Paging phase","Connection phase","Channel-blacklisting phase"],"abc","Bluetooth devices discover nearby devices during inquiry, establish contact through paging, and then enter the connection phase. Channel blacklisting is not a connection-establishment phase."],
+
+["In which Bluetooth operating mode does a slave remain inactive until the master instructs it to wake up?",["Active mode","Sniff mode","Hold mode","Park mode"],"d","In Park mode, a Bluetooth slave becomes inactive and releases its active communication address while remaining synchronized with the master. It can later be instructed to become active again."],
+
+["Which of the following functions are provided by the Bluetooth L2CAP layer?",["Connection-oriented and connectionless data services","Protocol multiplexing","Segmentation and reassembly","Generation of the magnetic field used by NFC tags"],"abc","L2CAP (Logical Link Control and Adaptation Protocol) supports connection-oriented and connectionless services, protocol multiplexing, and packet segmentation and reassembly. Generating magnetic fields for NFC is unrelated to L2CAP."],
+
+["A single Z-Wave network can contain up to approximately how many nodes?",["32","64","128","232"],"d","According to the provided course question, a single Z-Wave network can contain up to approximately 232 nodes."],
+
+["Which of the following statements about Z-Wave addressing are correct?",["Each logical Z-Wave network has one Home ID.","A Z-Wave Node ID has a length of one byte.","A Z-Wave Home ID has a length of four bytes.","Nodes having different Home IDs can communicate directly with one another."],"abc","A Z-Wave network is identified by a 4-byte Home ID, while individual nodes use 1-byte Node IDs. Different Home IDs identify different logical networks."],
+
+["Which of the following statements about ISA100.11a are correct?",["Its network and transport layers are based on TCP, UDP, or IPv6.","Its data-link layer supports mesh networking with frequency hopping.","Its radio is based on IEEE 802.15.4.","It supports only a ring topology."],"abc","ISA100.11a is an industrial wireless networking standard. It uses IEEE 802.15.4-based radio, supports mesh networking with frequency hopping, and supports IP-related networking technologies. It is not restricted to ring topology."],
+
+["Why is multi-hop communication commonly used in a wireless sensor network?",["Sensor nodes have short transmission ranges, so intermediate nodes relay data toward the sink.","Every sensor node must communicate directly with the Internet.","Multi-hop communication eliminates the need for a sink node.","Only mobile sensor nodes are permitted to transmit data."],"a","Sensor nodes have limited transmission power and range. Intermediate nodes relay packets from one node to another until the data reaches the sink."],
+
+["Which of the following is described as an optional unit of a sensor node?",["Sensing unit","Processing unit","Power unit","Location-finding system such as GPS"],"d","The sensing, processing, and power units are essential components of a typical sensor node. A location-finding system such as GPS is optional."],
+
+["If n denotes the number of nodes in a sensor network, the lecture states that the throughput decreases approximately at what rate as the network scales?",["1/n","n","sqrt(n)","1/sqrt(n)"],"d","According to the lecture referenced by the question, throughput decreases approximately as 1/sqrt(n), where n is the number of nodes. More nodes must share the wireless medium."],
+
+["Which types of sensor-node misbehavior are classified as intentional?",["Malicious behavior","Selfish behavior","Failed-node behavior","Badly failed-node behavior"],"ab","Malicious nodes deliberately attack or disrupt the network, while selfish nodes refuse to cooperate to conserve resources. Ordinary node failures are generally associated with malfunction."],
+
+["What distinguishes a badly failed sensor node from an ordinarily failed sensor node?",["It additionally sends false routing messages.","It always increases the network throughput.","It changes from a mobile node into a stationary node.","It communicates normally but consumes no power."],"a","An ordinarily failed node may stop functioning correctly. A badly failed node may continue participating while sending false routing messages, misleading other nodes and disrupting communication."],
+
+["Which consequence may arise when a selfish sensor node refuses to cooperate because forwarding involves a personal cost?",["It forwards every received packet twice.","It drops a received packet instead of forwarding it.","It automatically becomes the sink node.","It increases the communication range of neighboring nodes."],"b","A selfish node may drop other nodes' packets to conserve battery power and other resources, reducing cooperation and network performance."]
 ],
+
 4:[
 ["What does the ultrasonic sensor measure generally in the AID system?",["Humidity","Distance of the object","Soil pH","Light intensity"],"b","In the Agricultural Intrusion Detection system the ultrasonic sensor measures the distance of the detected object."],
 ["Which component processes the data received from the sensors in the AID system?",["Camera","NFC tag","Microcontroller","Ultrasonic sensor"],"c","The microcontroller processes the sensor data."],
